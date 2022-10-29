@@ -141,12 +141,108 @@ $white: hsl(0, 0%, 100%);
                 }
 
                 .comment-content {
-                    color: $white;
+                    color: $lightGrayishMagenta;
                     font-weight: 400;
                     font-size: 15px;
                     line-height: 22px;
                     margin-top: 1.75rem;
                     letter-spacing: 0.75px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #main-bg {
+        background-image: url("/images/bg-pattern-top-desktop.svg"), url("/images/bg-pattern-bottom-desktop.svg");
+        background-position: top left, bottom right;
+
+        .main-content {
+            padding: 3rem 10.25rem;
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+
+                .main-title {
+                    text-align: left;
+                    margin-right: 12rem;
+
+                    .title {
+                        margin: 0;
+                        margin-top: 4.5rem;
+                        margin-right: 5rem;
+                        font-size: 53px;
+                        line-height: 48px;
+                        letter-spacing: -0.25px;
+                    }
+
+                    .description {
+                        margin-left: 0;
+                        margin-top: 1.5rem;
+                        letter-spacing: -0.45px;
+                    }
+                }
+
+                .rating-stars {
+                    width: initial;
+                    margin-top: 3.5rem;
+
+                    .rating-container {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 450px;
+                        height: 55px;
+
+                        .stars {
+                            margin-bottom: 0;
+                            margin-left: 2rem;
+                        }
+    
+                        .star-text {
+                            margin-right: 2rem;
+                        }
+
+                        .star-text.marginLeft {
+                            transform: translateX(30px);
+                        }
+                    }
+
+                    .rating-container:first-child {
+                        transform: translateX(-94px);
+                    }
+
+                    .rating-container:nth-child(2) {
+                        transform: translateX(-47px);
+                    }
+                }
+            }
+
+            .comments {
+                flex-direction: row;
+                margin-top: 3.4rem;
+
+                .comment:nth-child(2) {
+                    margin-left: 2rem;
+                    margin-right: 2rem;
+                }
+
+                .comment {
+                    padding: 2rem 2rem 2.3rem 2rem;
+                    height: auto;
+                    margin-bottom: 0;
+                    .comment-content {
+                        letter-spacing: 0.7px;
+                    }
+                }
+
+                .comment:nth-child(2) {
+                    transform: translateY(17px);
+                }
+
+                .comment:nth-child(3) {
+                    transform: translateY(34px);
                 }
             }
         }
